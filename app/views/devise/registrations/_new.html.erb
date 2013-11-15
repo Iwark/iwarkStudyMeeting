@@ -1,0 +1,17 @@
+<h2>参加するぞう</h2>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="label">お名前:</div>
+  <div class="field"><%= f.text_field :name, :autofocus => true %>　以上　にとり</div>
+  <div class="label">メアド:</div>
+  <div class="field"><%= f.email_field :email %></div>
+  <div class="label">パスワード: </div>
+  <div class="field"><%= f.password_field :password %></div>
+  <div class="label">パスもっかい:</div>
+  <div class="field"><%= f.password_field :password_confirmation %></div>
+  <div class="register"><%= f.submit "とりあえず参加しとくかね" %></div>
+<% end %>
+
+<%# render "devise/shared/links" %>

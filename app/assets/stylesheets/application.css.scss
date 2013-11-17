@@ -65,11 +65,16 @@ body{
 	border-radius: 4px;
 	padding-left:10px;
 }
-
 hr{
 	clear: both;
 	text-align:left;
 	margin-left:0px;
+}
+.summary{
+	padding-left:20px;
+	border:1px solid #000;
+	border-radius:4px;
+	border-width:1px;
 }
 
 .label{

@@ -1,0 +1,115 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+body{
+	margin: 0;
+}
+#contents{
+}
+#header{
+	top: 0px;
+	height: 80px;
+	position:absolute;
+	width: 100%;
+	#line1{
+		position:absolute;
+		top:0;
+		width:100%;
+		height:3px;
+		background-image: image-url("line.jpg");
+	}
+	#logo{
+		float: left;
+		img{
+			height:80px;
+			background-image: image-url("logo.png");
+		}
+	}
+	#login{
+		float:left;
+		height:80px;
+		width:482px;
+		padding:10px;
+		padding-left: 20px;
+	}
+	#line2{
+		position:absolute;
+		top:77px;
+		width:100%;
+		height:3px;
+		background-image: image-url("line.jpg");
+	}
+}
+#body{
+	top: 80px;
+	left: 32px;
+	width: 100%;
+	max-width: 640px;
+	position:absolute;
+}
+#index{
+	position:absolute;
+	left:704px;
+	top: 108px;
+	width: 96px;
+	background-color: #ddd;
+	border-radius: 4px;
+	padding-left:10px;
+}
+
+hr{
+	clear: both;
+	text-align:left;
+	margin-left:0px;
+}
+
+.label{
+ 	clear: both;
+ 	float: left;
+ 	width:100px;
+ 	text-align: right;
+}
+.field{
+ 	float: left;
+}
+.register{
+	padding-top:1px;
+	padding-bottom:10px;
+	padding-left:55px;
+	clear: both;
+}
+legend{
+	margin-bottom:5px;
+}
+.email{
+	float: left;
+}
+.password{
+	margin-left: 30px;
+	float: left;
+}
+.remember_me{
+	clear: both;
+	float: left;
+}
+.login{
+	float: left;
+	margin-left: 20px;
+	width: 100px;
+	height: 20px;
+	input{
+		font-size: 12px;
+		background-color: gray;
+		color:white;
+	}
+}

@@ -1,8 +1,13 @@
 IwarkStudyMeeting::Application.routes.draw do
+  resources :meetings
+
+  get "members/index"
   devise_for :users, controllers: {
     registrations: 'custom_devise/registrations'
   }
   get "welcome/index"
+  get "members/index"
+  post "members/participate"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

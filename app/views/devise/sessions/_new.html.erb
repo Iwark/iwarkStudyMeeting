@@ -1,7 +1,5 @@
-<h2>ログイン的な</h2>
-
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div class="email">いわゆるメアド  <%= f.email_field :email, :autofocus => true %></div>
+  <div class="email">メアド  <%= f.email_field :email, :autofocus => true %></div>
   <div class="password">パスワード  <%= f.password_field :password %></div>
 
   <% if devise_mapping.rememberable? -%>

@@ -7,12 +7,34 @@
   <%= csrf_meta_tags %>
 </head>
 <body class=<%=params[:controller]%>>
-
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-
-
-<%= yield %>
-
+	<div id="contents">
+		<div id="header">
+			<div id="line1"></div>
+			<div id="logo"> <%= link_to image_tag(image_url('logo.png'), { :border => '0' }), root_url %></div>
+			<div id="login">
+				<% if current_user %>
+					お名前：<%= current_user.name %><br />
+					申請済み回数：<% current_user.meetings.each do |m| %>第<%= m.id %>回, <% end %><br />
+					<%= link_to 'ログアウト', destroy_user_session_path, { :method => "DELETE", :confirmation => "本当にログアウトするんだな...？" } %>
+				<% else %>
+					<%= render 'devise/sessions/new' %>
+				<% end %>
+			</div>
+			<div id="line2"></div>
+		</div>
+		<div id="body">
+			<p class="notice"><%= notice %></p>
+			<p class="alert"><%= alert %></p>
+			<%= yield %>
+		</div>
+		<% if false %>
+		<div id="index">
+		<h3>参加者一覧</h3>
+		<% @index_users.each do |index_user| %>
+			<p><strong>・<%= index_user.name %></strong></p>
+		<% end %>
+		<% end %>
+	</div>
+	</div>
 </body>
 </html>

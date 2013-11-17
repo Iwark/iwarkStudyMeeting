@@ -1,0 +1,45 @@
+<div id="summary">
+	<h3>主な内容のまとめ（予定）</h3>
+	<div>
+		① プログラマに限らず知っておいた方が良いなぁと思うこと。
+		<p><b>プログラミング基礎</b>、<b>共同開発スキル</b>、<b>MVCパターン</b>について</p>
+	</div>
+	<div>
+		② プログラミングに関する、もう少し深い内容
+		<p><b>Objective-C(iPhone)</b>、<b>Ruby on Rails</b> または <b>Node.js</b> (サーバー) あたりの予定</p>
+	</div>
+</div>
+
+<% @meetings.each do |meeting| %>
+<h2><%= meeting.name %></h2>
+<h3><%= meeting.opend_at.strftime("%m月%d日 %H時%M分")%> <%= meeting.place %>にて開催予定</h3>
+<p>参加予定者:
+	<% i=0 %>
+	<% meeting.users.each do |user| %>
+		<%= ',' if i != 0 %>
+		<b><%= user.name %></b>
+		<% i+=1 %>
+	<% end %>
+</p>
+<p><%= meeting.description %></p>
+<% end %>
+<% if false %>
+<h3>詳しい内容と日程予定</h3>
+<p>計画倒れになることは目に見えているのですががががががががががガガ</p>
+<div><strong>第２回（GiTによる共同開発）：12月予定</strong></div>
+<p>主な対象者：GiTを使っていない人。</p>
+<div><strong>第３回（良い設計って何だ、MVCって？）：12月予定</strong></div>
+<p>主な対象者：今までよりも、もう少し良質なコードを書きたい人。</p>
+<div><strong>第４回（今までの復習・実践）：1月予定</strong></div>
+<p>主な対象者：プログラミング勉強したい人。</p>
+<div><strong>第５回（テスト駆動開発）：1月予定</strong></div>
+<p>主な対象者：さらに大規模なシステムでバグを減らす方法に興味のある人。</p>
+<div><strong>第６回（サーバー開発）：2月予定</strong></div>
+<p>主な対象者：サーバー側のプログラミングに興味がある人。RailsかNode.js。</p>
+<div><strong>第７回（アプリとの連携）：2月予定</strong></div>
+<p>主な対象者：第６回の続き。iPhoneアプリと連携する方法。</p>
+<div><strong>最終回（ハッカソン的な）：3月予定</strong></div>
+<p>主な対象者：好き勝手作りまくってみようかって感じ。</p>
+<% end %>
+
+

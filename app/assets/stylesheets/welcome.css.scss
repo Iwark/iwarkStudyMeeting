@@ -1,6 +1,30 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.wekcome{
+.welcome{
+	#study_logo{
+		img{
+			width: 100%;
+		}
+	}
+	.chat{
+		clear: both;
+		.iwark{
+			float: left;
+			img{
+				width: 55px;
+			}
+		}
+		.contents{
+			float: left;
+			padding-left: 10px;
+		}
+	}
 
+	#summary{
+		padding-left:20px;
+		border:1px solid;
+		border-radius:4px;
+		border-width:1px;
+	}
 }

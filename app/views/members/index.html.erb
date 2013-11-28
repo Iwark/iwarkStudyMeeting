@@ -10,5 +10,5 @@
 	</fieldset>
 <% end %>
 <% else %>
-<div>この勉強会には既に参加申請済みです！</div>
+<div>この勉強会には既に参加申請済みです！<%= link_to '参加を取り消す', {controller:'members' ,action:'cancel'}, {method:'delete'} %></div>
 <% end %>

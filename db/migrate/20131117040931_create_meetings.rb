@@ -4,7 +4,7 @@ class CreateMeetings < ActiveRecord::Migration
       t.string :name
       t.datetime :opend_at
       t.string :place
-      t.string :description
+      t.text :description
 
       t.timestamps
     end

@@ -1,5 +1,8 @@
 <%= render 'members/summary' %>
-<% if !current_user.meetings.find(@meeting) %>
+
+<%# link_to '今回の資料', url_for('/assets/1.pdf') %>
+
+<% if !current_user.meetings.find_by(id:@meeting.id) %>
 <%= form_tag('participate', :method => :post) do %>
   <fieldset>
   	<legend><b>勉強会・参加申請フォーム</b></legend>

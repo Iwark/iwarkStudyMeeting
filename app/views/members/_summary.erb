@@ -12,7 +12,7 @@
 
 <% @meetings.each do |meeting| %>
 <h2><%= meeting.name %></h2>
-<h3><%= meeting.opend_at.strftime("%m月%d日 %H時%M分")%> <%= meeting.place %>にて開催予定</h3>
+<h3><%= meeting.opend_at.strftime("%m月%d日 %H時%M分")%> <%= meeting.place %>にて開催</h3>
 <p>参加予定者:
 	<% i=0 %>
 	<% meeting.users.each do |user| %>
@@ -21,7 +21,7 @@
 		<% i+=1 %>
 	<% end %>
 </p>
-<p><%= meeting.description %></p>
+<p><%= simple_format(meeting.description) %></p>
 <% end %>
 <% if false %>
 <h3>詳しい内容と日程予定</h3>

@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20131117041755) do
     t.string   "name"
     t.datetime "opend_at"
     t.string   "place"
-    t.string   "description"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

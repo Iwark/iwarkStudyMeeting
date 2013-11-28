@@ -11,17 +11,21 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div>
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
-  <div class="field">
+  <div>
     <%= f.label :opend_at %><br>
     <%= f.datetime_select :opend_at %>
   </div>
-  <div class="field">
+  <div>
     <%= f.label :place %><br>
     <%= f.text_field :place %>
+  </div>
+  <div>
+    <%= f.label :description %><br>
+    <%= f.text_area :description, { style: 'width:400px;height:100px;'} %>
   </div>
   <div class="actions">
     <%= f.submit %>

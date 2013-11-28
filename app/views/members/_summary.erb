@@ -10,6 +10,8 @@
 	</div>
 </div>
 
+<img src="<%= image_url('study1.jpg') %>" style="width:640px;" />
+
 <% @meetings.each do |meeting| %>
 <h2><%= meeting.name %></h2>
 <h3><%= meeting.opend_at.strftime("%m月%d日 %H時%M分")%> <%= meeting.place %>にて開催</h3>
